@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title></title>
+	<meta charset="UTF-8">
+	<style>
+	body {
+		padding-top: 250px;
+		text-align: center;
+	}
+	.option-list {
+		position: absolute;
+		background: #fff;
+		width: 200px;
+		left: 0;
+		top: 0;
+		border-radius: 5px;
+		box-shadow: 0 0 10px rgba(0, 0, 0, .8);
+		text-align: center;
+		display: none;
+		z-index: 2;
+	}
+	.option-list:after {
+		bottom: 100%;
+		left: 50%;
+		border: solid transparent;
+		content: " ";
+		height: 0;
+		width: 0;
+		position: absolute;
+		pointer-events: none;
+		border-color: rgba(255, 255, 255, 0);
+		border-bottom-color: #ffffff;
+		border-width: 5px;
+		margin-left: -5px;
+	}
+	.option-list a {
+		display: block;
+		padding: 5px 0;
+		text-decoration: none;
+		color: #666;
+	}
+	.option-list a:hover {
+		color: #444;
+		background: #eee;
+		border-radius: 5px;
+	}
+	</style>
+	<script type="text/javascript" src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+	<script type="text/javascript" src="jquery.subMenu.js"></script>
+</head>
+<body>
+
+	<p>
+		<a href="/">Some link</a>
+		<span class="open-options" aria-hidden="true" data-options=".list1">Options</span>
+	</p>
+	<div class="option-list list1">
+		<a href="http://test/id=1" selected="selected" title="Go to the option">Option 1</a>
+		<a href="http://test/id=2" title="Go to the option">Option 2</a>
+		<a href="http://test/id=3" title="Go to the option">Option 3</a>
+		<a href="http://test/id=4" title="Go to the option">Option 4</a>
+		<a href="http://test/id=5" title="Go to the option">Option 5</a>
+		<a href="http://test/id=6" title="Go to the option">Option 6</a>
+	</div>
+
+	<p>
+		<span class="open-options" aria-hidden="true" data-options=".list2">Options 2</span>
+	</p>
+	<div class="option-list list2">
+		<a href="http://test/id=7" selected="selected" title="Go to the option">Option 1</a>
+		<a href="http://test/id=8" title="Go to the option">Option 2</a>
+	</div>
+
+<script type="text/javascript">
+	$('.open-options').subMenu();
+</script>
+</body>
+</html>
