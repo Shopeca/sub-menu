@@ -1,6 +1,11 @@
 # sub-menu
 jQuery plugin for submenus
 
+## Demo
+
+https://shopeca.github.io/sub-menu/
+
+
 ## Example Usage
 
 ### HTML
